@@ -1,8 +1,10 @@
-from django.db.models import Manager, Q, CharField, TextField, get_models
+from django.db.models import Manager, Q, CharField, TextField
+from django.apps import apps
 from mezzanine.conf import settings
 from mezzanine.core.managers import CurrentSiteManager, SearchableManager
 from django.utils.timezone import now
 
+get_models = apps.get_models
 
 class PublishedManager(Manager):
     """

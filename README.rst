@@ -11,10 +11,9 @@ Features:
 
 Requirements:
 
-- mezzanine >= 3.1
+- Mezzanine >= 4.2.3
 - markdown
 - diff-match-patch
-- south
 
 
 =========
@@ -36,8 +35,22 @@ http://github.com/stephenmcd/mezzanine
 
 
 ===========
+This Fork
+===========
+
+This fork borrows heavily from the original project https://github.com/dfalk/mezzanine-wiki.
+Essentially the only changes are: updating the views to Class based, removing South
+as the db and tweaking the urls.
+
+===========
 Quick start
 ===========
+
+1. Install mezzanine-wiki:
+
+    Clone repo onto system. cd into top level 'mezzanine-wiki'.
+    Activate virtualenv (if applicable).
+    Use " pip install . "
 
 1. Add "mezzanine_wiki" to your INSTALLED_APPS setting like this::
 

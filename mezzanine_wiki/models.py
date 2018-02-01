@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from builtins import object
 from django.db import models
 from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext_lazy as _
@@ -44,7 +45,7 @@ class WikiPage(Displayable, Ownable):
 
     objects = DisplayableManager()
 
-    class Meta:
+    class Meta(object):
         verbose_name = _("Wiki page")
         verbose_name_plural = _("Wiki pages")
         ordering = ("title",)
@@ -93,7 +94,7 @@ class WikiPageRevision(Ownable, TimeStamped):
     description = models.CharField(_("Description"),
                                    max_length=400, blank=True)
 
-    class Meta:
+    class Meta(object):
         verbose_name = _("Wiki page revision")
         verbose_name_plural = _("Wiki page revisions")
         ordering = ("-created",)
@@ -112,7 +113,7 @@ class WikiCategory(Slugged):
     A category for grouping wiki pages.
     """
 
-    class Meta:
+    class Meta(object):
         verbose_name = _("Wiki Category")
         verbose_name_plural = _("Wiki Categories")
 

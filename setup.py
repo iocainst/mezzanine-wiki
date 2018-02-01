@@ -7,7 +7,7 @@ from setuptools import setup, find_packages
 from mezzanine_wiki import __version__ as version
 
 install_requires = [
-    "mezzanine >= 3.1",
+    "Mezzanine >= 4.2.3",
     "markdown",
     "diff-match-patch",
 ]
@@ -16,8 +16,8 @@ try:
     setup(
         name="mezzanine-wiki",
         version=version,
-        author="Dmitry Falk",
-        author_email="dfalk5@gmail.com",
+        author="Landon Wark",
+        author_email="lando.wark@gmail.com",
         description="Wiki app for Mezzanine content management platform.",
         long_description=open("README.rst").read(),
         license="BSD",

@@ -1,1 +1,3 @@
 *.pyc
+.idea/
+mezzanine_wiki.egg-info/
