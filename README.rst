@@ -48,27 +48,27 @@ Quick start
 
 1. Install mezzanine-wiki:
 
-    Clone repo onto system. cd into top level 'mezzanine-wiki'.
-    Activate virtualenv (if applicable).
-    Use " pip install . "
+    - Clone repo onto system. cd into top level 'mezzanine-wiki'.
+    - Activate virtualenv (if applicable).
+    - Use " pip install . "
 
-1. Add "mezzanine_wiki" to your INSTALLED_APPS setting like this::
+2. Add "mezzanine_wiki" to your INSTALLED_APPS setting like this::
 
     INSTALLED_APPS = (
         ...
         'mezzanine_wiki',
     )
     
-2. Add "mezzanine_wiki.WikiPage" to SEARCH_MODEL_CHOICES setting like this:
+3. Add "mezzanine_wiki.WikiPage" to SEARCH_MODEL_CHOICES setting like this:
 
     SEARCH_MODEL_CHOICES = ('pages.Page', 'blog.BlogPost', 'mezzanine_wiki.WikiPage')
 
-3. Include the wiki URLconf in your project urls.py like this::
+4. Include the wiki URLconf in your project urls.py like this::
 
     url(r'^wiki/', include('mezzanine_wiki.urls')),
 
-4. Run `python manage.py migrate` to create the wiki models.
+5. Run `python manage.py migrate` to create the wiki models.
 
-5. Restart server.
+6. Restart server.
 
 6. Visit /wiki/ to use the wiki. 
