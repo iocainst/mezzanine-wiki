@@ -46,11 +46,7 @@ as the db and tweaking the urls.
 Quick start
 ===========
 
-1. Install mezzanine-wiki:
-
-    - Clone repo onto system. cd into top level 'mezzanine-wiki'.
-    - Activate virtualenv (if applicable).
-    - Use " pip install . "
+1. Activate your virtualenv (if applicable). Install mezzanine-wiki with "pip install mezzanine-wiki":
 
 2. Add "mezzanine_wiki" to your INSTALLED_APPS setting like this::
 
