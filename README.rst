@@ -55,16 +55,22 @@ Quick start
         'mezzanine_wiki',
     )
     
-3. Add "mezzanine_wiki.WikiPage" to SEARCH_MODEL_CHOICES setting like this:
+3. Add "mezzanine_wiki.WikiPage" to SEARCH_MODEL_CHOICES in your app's settings like this:
 
-    SEARCH_MODEL_CHOICES = ('pages.Page', 'blog.BlogPost', 'mezzanine_wiki.WikiPage')
+   SEARCH_MODEL_CHOICES = ('pages.Page', 'blog.BlogPost', 'mezzanine_wiki.WikiPage')
 
 4. Include the wiki URLconf in your project urls.py like this::
 
-    url(r'^wiki/', include('mezzanine_wiki.urls')),
+   url(r'^wiki/', include('mezzanine_wiki.urls')),
 
-5. Run `python manage.py migrate` to create the wiki models.
+5. To use the RTF editor add the following to your app's settings:
 
-6. Restart server.
+   WIKI_TEXT_WIDGET_CLASS = 'mezzanine.core.forms.TinyMceWidget'
 
-6. Visit /wiki/ to use the wiki. 
+6. Run `python manage.py migrate` to create the wiki models.
+
+7. Restart server.
+
+8. Visit /wiki/ to use the wiki.
+
+
